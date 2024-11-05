@@ -5,11 +5,11 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Instalando dependencias
-        command: npm i
+          name: Instalando dependencias
+          command: npm i
       - run:
-        name: Executando os testes
-        command: npm test
+          name: Executando os testes
+          command: npm test
 
 workflows:
   build_and_test:
