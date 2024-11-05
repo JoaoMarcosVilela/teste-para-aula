@@ -1,0 +1,17 @@
+jobs:
+  build:
+    docker: 
+      - image: circleci/node:14.16.0
+    steps:
+      - checkout
+      - run:
+        name: Instalando dependencias
+        command: npm i
+      - run:
+        name: Executando os testes
+        command: npm test
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
