@@ -18,6 +18,9 @@ jobs:
       - image: circleci/node:14.16.0
     steps:
       - run:
+        name: Instalando dependencias
+        command: npm i
+      - run:
           name: Executando testes
           command: npm test
 
